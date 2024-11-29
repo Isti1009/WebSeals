@@ -15,18 +15,27 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Logo"
-            width={50}
-            height={50}
-            className="rounded-md"
+            width={80}
+            height={80}
+            className="rounded-md hover:scale-105 transition-all duration-300 ease-in-out"
           />
         </Link>
-        <Link href="/about" className="hover:text-blue-400">
+        <Link
+          href="/about"
+          className="text-xl font-bold text-white hover:text-blue-400"
+        >
           About
         </Link>
-        <Link href="/gallery" className="hover:text-blue-400">
+        <Link
+          href="/gallery"
+          className="text-xl font-bold text-white hover:text-blue-400"
+        >
           Gallery
         </Link>
-        <Link href="/stake" className="hover:text-blue-400">
+        <Link
+          href="/stake"
+          className=" text-xl font-bold text-white hover:text-blue-400"
+        >
           Stake
         </Link>
       </div>

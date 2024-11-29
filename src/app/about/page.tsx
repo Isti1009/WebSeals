@@ -1,4 +1,12 @@
+import Carousel from "@/components/ui/Carausel";
 import Image from "next/image";
+const imageList = [
+  { src: "/images/test/1.png", alt: "Image 1" },
+  { src: "/images/test/2.png", alt: "Image 2" },
+  { src: "/images/test/3.png", alt: "Image 3" },
+  { src: "/images/test/4.png", alt: "Image 4" },
+  { src: "/images/test/5.png", alt: "Image 5" },
+];
 
 const AboutPage: React.FC = () => {
   return (
@@ -51,6 +59,27 @@ const AboutPage: React.FC = () => {
       <p className="text-lg">
         Snapshot will be taken on <strong>December 4th at 1 PM UTC</strong>.
       </p>
+      <div>
+        <h1 className="  mb-2 mt-12  ">
+          <span className=" block text-4xl md:text-5xl font-bold ">
+            The Prize
+          </span>
+          <span className="block mb-4 mt-4 text-lg leading-relaxed ">
+            Rewards for challange leaders, it cloud be you.
+          </span>{" "}
+        </h1>
+      </div>
+      <Carousel images={imageList} interval={5000} />
+      <div>
+        <h1 className="  mb-2 mt-5  ">
+          <span className=" block text-4xl md:text-5xl font-bold ">
+            Expedition
+          </span>
+          <span className="block mb-4 mt-4 text-lg leading-relaxed ">
+            For 1st winners
+          </span>{" "}
+        </h1>
+      </div>
     </section>
   );
 };
