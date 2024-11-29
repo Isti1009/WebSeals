@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Leaderboard = () => {
@@ -11,23 +12,23 @@ const Leaderboard = () => {
   const rankEmojis = ["🥇", "🥈", "🥉"];
 
   return (
-    <div className="flex flex-col items-center bg-black text-white min-h-screen py-8 px-4">
-      <h1 className="text-4xl font-bold mb-2">Leaderboard</h1>
-      <span className="text-gray-400 text-center">
-        Stake your Seals, rise to the top, and show off your
-      </span>
-      <span className="text-gray-400 text-center mb-6">
-        collection of these carefree, quirky Seals.
-      </span>
-      <div className="w-full max-w-3xl space-y-4">
+    <div className="flex flex-col items-center bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white min-h-screen py-8 px-4">
+      <h1 className="text-4xl font-extrabold mb-4 text-gray-400">
+        Leaderboard
+      </h1>
+      <p className="text-gray-400 text-center mb-8 max-w-lg">
+        Stake your Seals, climb the leaderboard, and showcase your quirky Seal
+        collection!
+      </p>
+      <div className="w-full max-w-3xl space-y-6">
         {leaderboardData.map((data, index) => (
           <div
             key={data.rank}
-            className="flex bg-gray-900 rounded-lg overflow-hidden shadow-md"
+            className="flex bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform"
           >
             {/* Rank Section */}
-            <div className="flex items-center justify-center w-20 bg-gray-800">
-              <div className="flex items-center justify-center w-12 h-12 bg-gray-700 rounded-full text-2xl">
+            <div className="flex items-center justify-center w-24 bg-gradient-to-br from-[#18181B] to-[#a9b1c0] text-white">
+              <div className="flex items-center justify-center w-14 h-14 bg-black bg-opacity-20 rounded-full text-3xl">
                 {rankEmojis[index] || data.rank}
               </div>
             </div>
@@ -36,16 +37,29 @@ const Leaderboard = () => {
             <div className="flex-grow flex items-center justify-between p-4">
               {/* Avatar and Name */}
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gray-600 rounded-full"></div>
+                <div className="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-600 rounded-full flex-shrink-0 flex items-center justify-center">
+                  <Image
+                    src="/images/seals.png"
+                    alt="User Avatar"
+                    width={40}
+                    height={40}
+                    className="rounded-full object-cover"
+                  />
+                </div>
                 <div>
-                  <p className="font-bold">{data.name}</p>
+                  <p className="text-xl font-bold  text-gray-400">
+                    {data.name}
+                  </p>
                 </div>
               </div>
+              <div>
+                <p className="text-xl font-bold  text-gray-400">
+                  {data.points}
+                </p>
+              </div>
 
-              {/* Points and NFT Staked */}
-              <div className="flex flex-col items-end space-y-1">
-                <p className="text-lg font-semibold">{data.points}</p>
-                <p className="text-sm text-gray-400">
+              <div className="flex flex-col items-end">
+                <p className="text-xl font-bold  text-gray-400">
                   {data.staked} NFT Staked
                 </p>
               </div>
@@ -53,7 +67,7 @@ const Leaderboard = () => {
           </div>
         ))}
       </div>
-      <button className="mt-4 text-sm text-gray-400 hover:text-white">
+      <button className="mt-5 text-xl font-semibold  text-gray-400 hover:text-white">
         Load More ...
       </button>
     </div>
