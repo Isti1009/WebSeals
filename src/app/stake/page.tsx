@@ -1,12 +1,39 @@
 "use client";
 
+import Leaderboard from "@/components/layout/Leaderboard";
 import Image from "next/image";
 import React from "react";
 
 const StakePage: React.FC = () => {
   return (
-    <section className="h-screen bg-cover bg-center bg-gray-100">
-      <div className="flex flex-col items-center justify-center h-full p-6">
+    <section className="bg-gradient-to-bl from-black via-[#231F17] to-black text-white py-12 px-4 md:px-12 lg:px-24 flex flex-col justify-center items-center text-center">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-12 space-y-8 md:space-y-0 md:space-x-8">
+      <Image
+          src="/images/seals.png"
+          alt="Seals NFT Challenge"
+          width={150}
+          height={150}
+          className="object-contain"
+        />
+      <div className="flex flex-col  justify-between  items-center mb-4 ">
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+          <span className="block mb-2">Stake, Win and Chill</span>
+          <span className="block">Like Seals</span>
+        </h1>
+        <span className="block mt-4 text-lg leading-relaxed ">
+            Discover the ultimate NFT Staking challange competate
+          </span>
+          <span className="">
+          to see who holds the most stacked NFTs and win prizes. </span>
+      </div>
+      <Image
+          src="/images/seals.png"
+          alt="Seals NFT Challenge"
+          width={150}
+          height={150}
+          className="object-contain"
+        /></div>
+      <div className="flex flex-col items-center justify-center h-full">
         {/* Main Container */}
         <div className="flex flex-col w-full max-w-4xl bg-[#18181B] text-white shadow-lg rounded-3xl p-8 space-y-6">
           {/* Top Section */}
@@ -74,6 +101,54 @@ const StakePage: React.FC = () => {
           {/* Stake Now Button - Centered horizontally but positioned under */}
         </div>
       </div>
+      <div className="w-full max-w-3xl space-y-6 mt-6">
+        
+          <div
+            className="flex bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform"
+          >
+            {/* Rank Section */}
+            <div className="flex items-center justify-center w-24 bg-gradient-to-br from-[#18181B] to-[#a9b1c0] text-white">
+              <div className="flex items-center justify-center w-14 h-14 bg-black bg-opacity-20 rounded-full text-3xl">
+                1
+              </div>
+            </div>
+
+            {/* User Info Section */}
+            <div className="flex-grow flex items-center justify-between p-4">
+              {/* Avatar and Name */}
+              <div className="flex items-center space-x-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-600 rounded-full flex-shrink-0 flex items-center justify-center">
+                  <Image
+                    src="/images/seals.png"
+                    alt="User Avatar"
+                    width={40}
+                    height={40}
+                    className="rounded-full object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-xl font-bold  text-gray-400">
+                    stars...123
+                  </p>
+                </div>
+              </div>
+              <div>
+                <p className="text-xl font-bold  text-gray-400">
+                  1234.23 $SEALS
+                </p>
+              </div>
+
+              <div className="flex flex-col items-end">
+                <p className="text-xl font-bold  text-gray-400">
+                  10 NFT Staked
+                </p>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+
+      <Leaderboard/>
     </section>
   );
 };
