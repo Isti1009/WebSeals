@@ -1,5 +1,5 @@
 const GaleryPage: React.FC = () => {
-  return <div>Gallery Page</div>;
+  return <section>Gallery Page</section>;
 };
 
 export default GaleryPage;

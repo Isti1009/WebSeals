@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="bg-gradient-to-bl from-black via-[#231F17] to-black text-white py-12 px-4 md:px-12 lg:px-24 flex flex-col justify-center items-center text-center">
+    <section className="bg-gradient-to-bl from-black via-[#231F17] to-black text-white py-12 px-4 md:px-12 lg:px-24 flex flex-col justify-center items-center text-center">
       <div className="flex flex-col md:flex-row justify-between items-center mb-12 space-y-8 md:space-y-0 md:space-x-8">
         <Image
           src="/images/seals.png"
@@ -51,7 +51,7 @@ const AboutPage: React.FC = () => {
       <p className="text-lg">
         Snapshot will be taken on <strong>December 4th at 1 PM UTC</strong>.
       </p>
-    </div>
+    </section>
   );
 };
 

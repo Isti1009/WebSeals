@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter } from "./fonts/fonts";
-import Navbar from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "Seals",
@@ -16,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        <Navbar />
         <main>{children}</main>
       </body>
     </html>
