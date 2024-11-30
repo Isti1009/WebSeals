@@ -1,11 +1,18 @@
 import Carousel from "@/components/ui/Carausel";
 import Image from "next/image";
 const imageList = [
-  { src: "/images/test/1.png", alt: "Image 1" },
-  { src: "/images/test/2.png", alt: "Image 2" },
-  { src: "/images/test/3.png", alt: "Image 3" },
-  { src: "/images/test/4.png", alt: "Image 4" },
-  { src: "/images/test/5.png", alt: "Image 5" },
+  { src: "/images/Prize/BytePets 12th.jpg", alt: "Image 1" },
+  { src: "/images/Prize/Celothiraptop 5th.jpg", alt: "Image 2" },
+  { src: "/images/Prize/Digitz 4th.jpg", alt: "Image 3" },
+  { src: "/images/Prize/Drama Queens 2nd.jpg", alt: "Image 4" },
+  { src: "/images/Prize/Elysian Horde 3rd.jpg", alt: "Image 5" },
+  { src: "/images/Prize/Expedition 1st.jpg", alt: "Image 6" },
+  { src: "/images/Prize/Pixel Plebs 8th.jpg", alt: "Image 7" },
+  { src: "/images/Prize/RarityBotz 7th.jpg", alt: "Image 8" },
+  { src: "/images/Prize/Rebbits 6th.jpg", alt: "Image 9" },
+  { src: "/images/Prize/Stamp 11th.jpg", alt: "Image 10" },
+  { src: "/images/Prize/Steamland 10th.jpg", alt: "Image 11" },
+  { src: "/images/Prize/The Watchers 9th.jpg", alt: "Image 12" },
 ];
 
 const AboutPage: React.FC = () => {
@@ -13,7 +20,7 @@ const AboutPage: React.FC = () => {
     <section className="bg-gradient-to-bl from-black via-[#231F17] to-black text-white py-12 px-4 md:px-12 lg:px-24 flex flex-col justify-center items-center text-center">
       <div className="flex flex-col md:flex-row justify-between items-center mb-12 space-y-8 md:space-y-0 md:space-x-8">
         <Image
-          src="/images/seals.png"
+          src="/icon/About 1.png"
           alt="Seals NFT Challenge"
           width={150}
           height={150}
@@ -24,7 +31,7 @@ const AboutPage: React.FC = () => {
           <span className="block">from here.</span>
         </h1>
         <Image
-          src="/images/seals.png"
+          src="/icon/About 2.png"
           alt="Seals NFT Challenge"
           width={150}
           height={150}

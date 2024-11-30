@@ -12,7 +12,7 @@ const Leaderboard = () => {
   const rankEmojis = ["🥇", "🥈", "🥉"];
 
   return (
-    <div className="flex flex-col items-center bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white min-h-screen py-8 px-4">
+    <div className="flex flex-col items-center  text-white min-h-screen py-8 px-4">
       <h1 className="text-4xl font-extrabold mb-4 text-gray-400">
         Leaderboard
       </h1>
